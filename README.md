@@ -93,14 +93,14 @@ Pour CC et CA on trouve une situation intermédiaire avec des points exceptionne
 
 A partir des observations  précédentes, il paraît intéressant de rapporter l’énergie consommée à la population de manière à neutraliser ou décorréler certains effets. On construit donc des ratios de consommation par habitant en MWh/hab. pour le total et par secteur.
 
-Les constats statistiques sur ces ratios 
-décorrélation effective avec la population  [énergie_tabl4]
-corrélation très marquée entre consommation par habitant totale et consommation par habitant du secteur industriel  [énergie_tabl5] [énergie_graphe_8]
-des distributions non “normales” : les moyennes sont très différentes des médianes et les valeurs maximales sont bien au-delà du troisième quartile .Dans  les deux cas de la consommation totale et de la consommation secteur industriel  les valeurs maximales sont proches de 200 MWh/hab quand les médianes sont respectivement de 10 et 2 MWh/hab .
+Les constats statistiques sur ces ratios :
+- une décorrélation effective avec la population  [énergie_tabl4]
+- une corrélation très marquée entre consommation par habitant totale et consommation par habitant du secteur industriel  [énergie_tabl5] [énergie_graphe_8]
+- des distributions non “normales” : les moyennes sont très différentes des médianes et les valeurs maximales sont bien au-delà du troisième quartile .Dans  les deux cas de la consommation totale et de la consommation secteur industriel  les valeurs maximales sont proches de 200 MWh/hab quand les médianes sont respectivement de 10 et 2 MWh/hab .
 
 Pour illustrer ce dernier point , on a examiné plus en détail les distributions des ratios du secteur résidentiel ,qui paraît presque “normal” et du secteur industriel qui ne l’est pas de manière évidente.La méthodologie consiste à proposer une série de modèles de distributions possibles , à identifier le modèle donnant le meilleur accord [méthode fit de scipy.stats] puis à pratiquer un test de Kolmogorov-Smirnov (KS) pour décider si on accepte ce modèle.La liste proposée est : norm,lognorm ,genlogistic,pareto , genpareto ,weibull_min.
-consommation par habitant du secteur résidentiel : le meilleur modèle est une distribution genlogistic  [logistic généralisée énergie_graphe_9] .On a également effectué le test KS avec un modèle normal , qui confirme que ce n’est pas acceptable.
-consommation par accident du secteur industriel : le meilleur modèle est une distribution lognorm [lognormale énergie_graphe_10]
+- consommation par habitant du secteur résidentiel : le meilleur modèle est une distribution genlogistic  [logistic généralisée énergie_graphe_9] .On a également effectué le test KS avec un modèle normal , qui confirme que ce n’est pas acceptable.
+- consommation par accident du secteur industriel : le meilleur modèle est une distribution lognorm [lognormale énergie_graphe_10]
 Ces lois prennent en compte les queues de distribution.
 
 
